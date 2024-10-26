@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #a72aa4, #14557b);
+    color: #bdb4b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #171616;
+}
+
+.inputs {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+form input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #161210;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background: #73c034;
+}
+
+.inputs .weather-data {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.weather-data img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.weather-data {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
